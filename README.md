@@ -1,5 +1,10 @@
-# My Data Science Projects
-This repo contains code for projects that I've taken on or contributed to. For more information about me, you can visit my website at:
-www.chetgutwein.com
+## Demo Dashboard for Purple Air Sensors - Mostardi Platt
 
-You can contact me at: chet.gutwein@gmail.com
+
+#### Sensor List
+Mulford Manor (Evanston, Illinois)
+
+#### Installing new R packages
+1. SSH to GCP compute *shiny* instance
+2. enter the `sudo -i R` command to run R with admin priveleges
+3. enter `install.packages(<package name>)`
