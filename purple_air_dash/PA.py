@@ -106,7 +106,7 @@ def PA_sensor_pull(label):
         except:
             pass
 
-    psql_input = "INSERT INTO sensor_data1 (sensor_id, created_on, entry_id, A_PM1_ATM, A_PM25_ATM, A_PM10_ATM, temp, humidity, A_PM25_1,\
+    psql_input = "INSERT INTO sensor_data (sensor_id, created_on, entry_id, A_PM1_ATM, A_PM25_ATM, A_PM10_ATM, temp, humidity, A_PM25_1,\
 A_PM1_1, A_PM10_1,B_PM1_ATM, B_PM25_ATM, B_PM10_ATM, B_PM25_1,B_PM1_1, B_PM10_1) VALUES " + str(tuple(final_row)) + ";"
 
     return(psql_input)
@@ -118,10 +118,10 @@ def write_feed(key_list):
     args; list of keys for master
     output, none
     """
-    conn = psycopg2.connect(host="35.232.198.24",database="postgres", user="postgres", password="9eEBOdleImHrPDaq")
+    conn = psycopg2.connect(host="172.31.11.72",database="postgres", user="postgres", password="maXgBaNyr3w6TzT")
     for key in key_list:
         sql = PA_sensor_pull(key)
-        conn = psycopg2.connect(host="35.232.198.24",database="postgres", user="postgres", password="9eEBOdleImHrPDaq")
+        conn = psycopg2.connect(host="172.31.11.72",database="postgres", user="postgres", password="maXgBaNyr3w6TzT")
         cur = conn.cursor()
         cur.execute(sql)
         conn.commit()
