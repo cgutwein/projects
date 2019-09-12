@@ -26,3 +26,12 @@ To allow remote access to PostgreSQL:
 * locate postgresql.conf file and change `listen_addresses = '*'`
 * locate `pg_hba.conf` and add `host all all 0.0.0.0/0 md5` to the end of the file
 * restart PostgreSQL by entering `/etc/init.d/postgresql restart`
+
+
+Useful commands:
+
+`sudo -i -u postgres` switch to postgres account
+
+PostgreSQL commands:
+
+`\dt` shows all tables
